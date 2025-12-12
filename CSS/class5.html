@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inline vs block elements</title>
+    <style>
+
+        /* 
+            block element:
+                - It will take entire width from left to right of its parent
+                - It will always come in new line
+                - It will take height and width
+                - It will take margin and padding from all sides
+                example:
+                    - div, p, h1-h6
+            
+            inline element:
+                - It will take width fit to the content
+                - It will always come in same line
+                - It will not take height and width
+                - It will take margin from left and right only
+                - It takes padding from all the sides
+
+
+                
+        
+        */
+
+        div{
+            background-color: aqua;
+            height: 200px;
+            width: 200px;
+            margin: 10px;
+            padding: 20px;
+        }
+        
+        span, i{
+            background-color: blue;
+            color: white;
+            width: 4100px;
+            height: 3000px;
+            margin: 50px;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>baga</div>
+    <div>baga 2</div>
+
+    <span>this is span</span>
+    <i>this is i</i>
+    
+</body>
+</html>

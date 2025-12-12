@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors in CSS</title>
+    <style>
+        /* tag name or element selector */
+        div{
+            background-color: tomato;
+        }
+        /* id selector */
+        #baga1{
+            background-color: red;
+        }
+        #baga2{
+            background-color: teal;
+        }
+
+        /* class selector */
+        .mytext{
+            background-color: aqua;
+            height: 200px;
+            width: 200px;
+        }
+        /* group selector */
+        span, section, article{
+            background-color: purple;
+            color: white;
+        }
+
+        /* child selector */
+        div p{
+            background-color: blue;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>baga</div>
+
+    <p id="baga1">baga the great</p>
+    <p id="baga2">baga the great 2</p>
+
+    <h2 class="mytext">baga heading2</h2>
+    <h4 class="mytext">baga heading 4</h4>
+
+    <span>this is span</span>
+    <section>this is section</section>
+    <article>this is article</article>
+
+    <div>
+        <p>baga the great this is inside div tag</p>
+    </div>
+
+</body>
+</html>

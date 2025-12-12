@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rem, EM</title>
+    <style>
+        html{
+            font-size: 12px;
+        }
+        .parent{
+            font-size: 20px;
+        }
+        p{
+            /* how to calculate em
+                font size of parent in px * font size of child in em = font size of child in px
+                  20px * 2em = 40
+            
+            */
+            /*  root em */
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="parent">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, perspiciatis!</p>
+    </div>
+
+</body>
+</html>

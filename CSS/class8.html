@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units in CSS </title>
+    <style>
+
+        .parent{
+            /* 
+                vh, vw -> related to our screen we can see
+            */
+            height: 80vh;
+            width: 50vw;
+            background-color: lightblue;
+        }
+        .child{
+            /* 
+                % -> related to parent height and width
+            
+            */
+            height: 50%;
+            width: 80%;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+
+</body>
+</html>
