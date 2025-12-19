@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .parent{
+            width: 100vw;
+            height: 100vh;
+            background-color: #c7c7c7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .child{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            transition: background-color;
+            transition-duration: 3s;
+            /* 
+                // https://www.youtube.com/@lundeveloper
+
+                ease - slow
+                ease-in - slow start
+                ease-out - slow end
+                ease-in-out - slow start and slow end
+                linear - not fast and not slow just normal
+                steps - homework
+
+            */
+            transition-timing-function: ease-in-out; 
+            transition-timing-function: ease-in;
+            transition-timing-function: ease-out;
+            transition-timing-function: ease;
+            transition-timing-function: linear;
+            transition-timing-function: cubic-bezier(0.8, 1, 0.5, 1);
+            transition-delay: 2s;
+
+            /* transition duration time-function delay        */
+            transition: all 1s ease-in-out 1s;
+
+            
+            
+        }
+        .child:hover{
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+</body>
+</html>
