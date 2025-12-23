@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations in CSS</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+    .parent{
+        width: 100vw;
+        height: 100vh;
+        background-color: #c7c7c7;
+        position: relative;
+    }
+    .box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        animation-name: circle;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        /* animation-direction: alternate-reverse;
+        animation-fill-mode: forwards; */
+
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    }
+
+    @keyframes moveToRight {
+        from{
+            top: 0;
+            left: 0;
+            background-color: white;
+        }
+        to{
+            top: 0;
+            left: 1000px;
+            background-color: red;
+        }
+    }
+
+
+    @keyframes circle {
+        0%{
+            top: 0;
+            left: 0;
+        }
+        25%{
+            top: 0;
+            left: 1000px;
+        }
+        50%{
+            top: 1000px;
+            left: 1000px;
+
+        }
+        75%{
+            top: 1000px;
+            left: 0;
+        }
+        100%{
+            top: 0;
+            left: 0;
+        }
+    } 
+</style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box">box</div>
+    </div>
+</body>
+</html>
