@@ -12,3 +12,4 @@ console.log(mySalary); // 12000
 mySalary = 15000
 console.log(mySalary); // 15000
 
+
