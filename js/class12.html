@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector All</title>
+</head>
+<body>
+    <li>Home</li>
+    <li>About</li>
+    <li>Contact US</li>
+    <li>Our Story</li>
+    <li>Our Services</li>
+
+    <script>
+        let allLi = document.querySelectorAll("li")
+
+
+        allLi.forEach((singleLi)=>{
+            singleLi.style.backgroundColor = "red" 
+            singleLi.style.margin = "12px"           
+        })
+        
+        
+        
+    </script>
+</body>
+</html>
