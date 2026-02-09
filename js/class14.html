@@ -15,12 +15,24 @@
     <script>
             // all buttons
             let allButtons = document.querySelectorAll("button")
-            //
+            /*
+                allButtons = [
+                      <button id="purple">Purple</button>
+                        <button id="red">Red</button>
+                        <button id="cyan">Cyan</button>
+                        <button id="crimson">crimsan</button>
+                        <button id="coral">coral</button>
+                ]
+            */
+
+            console.log(allButtons);
+            
             let body = document.querySelector("body")
           
             allButtons.forEach((singleButton)=>{
-
+                
                 singleButton.addEventListener("mouseenter", ()=>{
+                    console.log(singleButton);
                     body.style.backgroundColor = singleButton.id
                 })
 
