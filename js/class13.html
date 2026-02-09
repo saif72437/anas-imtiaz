@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JS</title>
+
+</head>
+<body>
+    <button id="mybtn">Change bg color</button>
+    <div>I am baga</div>
+
+    <script>
+        //body
+        let body = document.querySelector("body")
+        
+        // button
+        let mybtn = document.querySelector("#mybtn")
+
+        // div
+        let div = document.querySelector("div")
+
+
+        let visible = true;
+        mybtn.addEventListener("click", ()=>{
+            body.style.backgroundColor = "red"
+            if(visible){
+                div.style.display = "none"
+                visible = false
+            }
+            else{
+                div.style.display = "block"
+                visible = true
+            }
+        })
+
+    </script>
+</body>
+</html>

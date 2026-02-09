@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background color </title>
+</head>
+<body>
+    <button id="purple">Purple</button>
+    <button id="red">Red</button>
+    <button id="cyan">Cyan</button>
+    <button id="crimson">crimsan</button>
+    <button id="coral">coral</button>
+
+    <script>
+            // all buttons
+            let allButtons = document.querySelectorAll("button")
+            //
+            let body = document.querySelector("body")
+          
+            allButtons.forEach((singleButton)=>{
+
+                singleButton.addEventListener("mouseenter", ()=>{
+                    body.style.backgroundColor = singleButton.id
+                })
+
+            })
+    
+    </script>
+</body>
+</html>
