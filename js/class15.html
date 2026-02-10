@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo app</title>
+    <style>
+        .todo-container{
+            padding: 20px;
+            border: 2px solid red;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="morinig walk...">
+    <button id="addbtn">ADD</button>
+    <div class="todo-container">
+        
+    </div>
+
+    <script>
+        let input = document.querySelector("input")
+        let addbtn = document.querySelector("#addbtn")
+        let todoContainer = document.querySelector(".todo-container")
+
+        addbtn.addEventListener("click", ()=>{
+            if(input.value){
+                let li = document.createElement("li")
+                
+                li.innerHTML = input.value;
+
+                console.log(li);
+
+                todoContainer.appendChild(li)
+                
+                input.value = ""
+            }else{
+                alert("Passa qusa")
+            }
+            
+            
+        })
+
+    </script>
+</body>
+</html>
