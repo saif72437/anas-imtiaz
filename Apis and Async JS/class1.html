@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let api_url = "https://jsonplaceholder.typicode.com/users/1"
+        
+       async function getDataFromApi(){
+                            // wait until data comes
+            let response = await fetch(api_url)
+            
+            let jsonData = await response.json()
+
+            console.log(jsonData);
+
+            let div = document.createElement("div")
+
+            div.innerHTML = `
+                <h2> ${jsonData.name} </h2>
+                <p> ${jsonData.email} </p>
+            `
+
+            document.querySelector("body").appendChild(div)
+            
+            
+        }
+
+        getDataFromApi()
+        
+    </script>
+</body>
+</html>
