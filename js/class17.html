@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Card</title>
+    <style>
+        /* Imported a modern, clean font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .main {
+            width: 100vw;
+            height: 100vh;
+            /* Added a subtle gradient background */
+            background: linear-gradient(135deg, #212121 0%, #121212 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Targeting the div created by your JS:
+           This gives it a modern "Glassmorphism" card effect 
+        */
+        .main > div {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            min-width: 320px;
+        }
+
+        /* Hover animation for the card */
+        .main > div:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Targeting the H2 (Name) */
+        .main > div h2 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        /* Targeting the P (Login/Username) */
+        .main > div p {
+            font-size: 1.1rem;
+            color: #8b949e; /* GitHub's text-muted color */
+            font-weight: 300;
+        }
+
+        /* Added a little decorative accent line before the username */
+        .main > div p::before {
+            content: '@';
+            color: #58a6ff; /* GitHub's blue accent color */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+
+    </div>
+    <script>
+       async function getMyGithubData() {
+        // why await
+            // when something gives you a promise write await infront of it
+            // await means data is comming but please wait for a second
+            let response = await fetch("https://api.github.com/users/saif72437")
+            
+            let data = await response.json()
+
+            let div = document.createElement("div")
+            div.innerHTML = 
+
+            `
+            <h2> ${data.name} </h2>
+            <p> ${data.login} </p>
+                    <img src="${data.avatar_url}" alt="">
+
+            `
+
+            document.querySelector(".main").appendChild(div)
+            ``
+            
+        }
+
+        getMyGithubData()
+    </script>
+</body>
+</html>
